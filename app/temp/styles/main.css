@@ -1,0 +1,325 @@
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 100;
+  src: local("Lato Hairline Italic"),local(Lato-HairlineItalic),url(//fonts.gstatic.com/s/lato/v13/81DMwqUqq96weubmVpbDyvesZW2xOQ-xsNqO47m55DA.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v13/9TBVFLzQ3GUZLG8FZ4yrEfesZW2xOQ-xsNqO47m55DA.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v13/CggrdU0t5c42NcNxN-VM3_esZW2xOQ-xsNqO47m55DA.woff) format("woff"); }
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 300;
+  src: local("Lato Light Italic"),local(Lato-LightItalic),url(//fonts.gstatic.com/s/lato/v13/2HG_tEPiQ4Z6795cGfdivPY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v13/2HG_tEPiQ4Z6795cGfdivFtXRa8TVwTICgirnJhmVJw.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v13/2HG_tEPiQ4Z6795cGfdivD8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 400;
+  src: local("Lato Italic"),local(Lato-Italic),url(//fonts.gstatic.com/s/lato/v13/bjaQ6jyWa8A2XFrSKceJyA.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v13/PLygLKRVCQnA5fhu3qk5fQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v13/oUan5VrEkpzIazlUe5ieaA.woff) format("woff"); }
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 700;
+  src: local("Lato Bold Italic"),local(Lato-BoldItalic),url(//fonts.gstatic.com/s/lato/v13/HkF_qI1x_noxlxhrhMQYEPY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v13/HkF_qI1x_noxlxhrhMQYEFtXRa8TVwTICgirnJhmVJw.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v13/HkF_qI1x_noxlxhrhMQYED8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 900;
+  src: local("Lato Black Italic"),local(Lato-BlackItalic),url(//fonts.gstatic.com/s/lato/v13/VNUH7ZAcagYBWsAiBBCEY_Y6323mHUZFJMgTvxaG2iE.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v13/VNUH7ZAcagYBWsAiBBCEY1tXRa8TVwTICgirnJhmVJw.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v13/VNUH7ZAcagYBWsAiBBCEYz8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 100;
+  src: local("Lato Hairline"),local(Lato-Hairline),url(//fonts.gstatic.com/s/lato/v13/KlmP_Vc2zOZBldw8AfXD5g.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v13/GtRkRNTnri0g82CjKnEB0Q.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v13/boeCNmOCCh-EWFLSfVffDg.woff) format("woff"); }
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Lato Light"),local(Lato-Light),url(//fonts.gstatic.com/s/lato/v13/zLhfkPOm_5ykmdm-wXaiuw.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v13/EsvMC5un3kjyUhB9ZEPPwg.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v13/KT3KS9Aol4WfR6Vas8kNcg.woff) format("woff"); }
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lato Regular"),local(Lato-Regular),url(//fonts.gstatic.com/s/lato/v13/nQhiC-wSiJx0pvEuJl8d8A.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v13/1YwB1sO8YE1Lyjf12WNiUA.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v13/9k-RPmcnxYEPm8CNFsH2gg.woff) format("woff"); }
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Lato Bold"),local(Lato-Bold),url(//fonts.gstatic.com/s/lato/v13/sBtfDPlEIwvKKU53nAG7AQ.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v13/H2DMvhDLycM56KNuAtbJYA.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v13/wkfQbvfT_02e2IWO3yYueQ.woff) format("woff"); }
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  src: local("Lato Black"),local(Lato-Black),url(//fonts.gstatic.com/s/lato/v13/BjDVcwQGWPX2RAidnkd0Bw.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v13/tI4j516nok_GrVf4dhunkg.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v13/BVtM30trf7q_jfqYeHfjtA.woff) format("woff"); }
+/*Variables*/
+:root {
+  /*custom properties*/
+  /*Custom media*/
+  /* Material Design Adaptive Breakpoints */
+  /*
+    Below you'll find CSS media queries based on the breakpoint guidance
+    published by the Material Design team. You can choose to use, customise
+    or remove these breakpoints based on your needs.
+
+    http://www.google.com/design/spec/layout/adaptive-ui.html#adaptive-ui-breakpoints
+   */
+  /* mobile-small */
+  /* mobile-large */
+  /* mobile-small-landscape */
+  /* mobile-large-landscape */
+  /* tablet-small-landscape */
+  /* tablet-large-landscape */
+  /* tablet-small */
+  /* tablet-large */
+  /* desktop-x-small-landscape */
+  /* desktop-x-small */
+  /* desktop-small-landscape */
+  /* desktop-small */
+  /* desktop-medium-landscape */
+  /* desktop-medium */
+  /* desktop-large */
+  /* desktop-xlarge */ }
+/* root */
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+/* Fonts */
+body {
+  font-family: "Lato", "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777; }
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+/* ==========================================================================
+   Custom CSS
+   ========================================================================== */
+.responsive {
+  font-size: calc(16px + 14 * ((100vw - 420px) / 860)); }
+body {
+  padding: 30px; }
+.header {
+  height: 95vh;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, .7)), to(rgba(40, 180, 131, .7))), url('../images/hero.jpg') no-repeat;
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, .7), rgba(40, 180, 131, .7)), url('../images/hero.jpg') no-repeat;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+.header__logobox {
+    position: absolute;
+    top: 40px;
+    left: 40px; }
+.header__logobox__logo {
+      height: 35px; }
+.header__title {
+    color: #fff;
+    text-transform: uppercase; }
+.header__title--main {
+      display: block;
+      font-size: 60px;
+      font-weight: 400;
+      letter-spacing: 35px; }
+.header__title--sub {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 17.4px; }
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+.clearfix:after {
+  clear: both; }
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+@media screen and (min-width: 1280px) {
+  .responsive {
+    font-size: 30px; } }
+@media screen and (max-width: 420px) {
+  .responsive {
+    font-size: 16px; } }
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+@media print {
+  *,
+  *:before,
+  *:after,
+  *:first-letter,
+  *:first-line {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
+/*# sourceMappingURL=main.css.map */
