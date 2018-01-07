@@ -26,13 +26,15 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -60%);
+    text-align: center;
   }
 
   &__title {
-    color: #fff;
+    color: var(--white);
     text-transform: uppercase;
     // Hack fix for animation shaking when we don't use backface of elements while transformations
     backface-visibility: hidden;
+    margin-bottom: 60px;
 
     &--main {
       display: block;

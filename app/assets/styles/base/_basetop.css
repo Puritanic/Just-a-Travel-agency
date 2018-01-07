@@ -101,4 +101,5 @@ textarea {
 }
 body {
   padding: 30px;
+  background: color(var(--eggshell) tint(80%));
 }
