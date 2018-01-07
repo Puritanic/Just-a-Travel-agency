@@ -170,6 +170,54 @@ textarea {
   font-size: calc(16px + 14 * ((100vw - 420px) / 860)); }
 body {
   padding: 30px; }
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px); }
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1; } }
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px); }
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1; } }
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px); }
+  80% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1; } }
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px); }
+  80% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1; } }
 .header {
   height: 95vh;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, .7)), to(rgba(40, 180, 131, .7))), url('../images/hero.jpg') no-repeat;
@@ -193,17 +241,23 @@ body {
             transform: translate(-50%, -60%); }
 .header__title {
     color: #fff;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
 .header__title--main {
       display: block;
       font-size: 60px;
       font-weight: 400;
-      letter-spacing: 35px; }
+      letter-spacing: 35px;
+      -webkit-animation: moveInLeft 1s ease-out;
+              animation: moveInLeft 1s ease-out; }
 .header__title--sub {
       display: block;
       font-size: 20px;
       font-weight: 700;
-      letter-spacing: 17.4px; }
+      letter-spacing: 17.4px;
+      -webkit-animation: moveInRight 1s ease-out;
+              animation: moveInRight 1s ease-out; }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
