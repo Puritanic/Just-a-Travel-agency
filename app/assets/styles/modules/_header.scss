@@ -21,6 +21,13 @@
     }
   } // ! logobox
 
+  &__container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+
   &__title {
     color: #fff;
     text-transform: uppercase;

@@ -185,6 +185,12 @@ body {
     left: 40px; }
 .header__logobox__logo {
       height: 35px; }
+.header__container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%); }
 .header__title {
     color: #fff;
     text-transform: uppercase; }
