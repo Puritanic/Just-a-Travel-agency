@@ -1,9 +1,12 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
 .header {
   height: 95vh;
   background: linear-gradient(
       to right bottom,
-      rgba(126, 213, 111, 0.7),
-      rgba(40, 180, 131, 0.7)
+      rgba($primary-light-green, 0.7),
+      rgba($primary-dark-green, 0.7)
     ),
     resolve("hero.jpg") no-repeat;
   background-size: cover;
@@ -13,11 +16,11 @@
 
   &__logobox {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 
     &__logo {
-      height: 35px;
+      height: 3.5rem;
     }
   } // ! logobox
 
@@ -34,20 +37,20 @@
     text-transform: uppercase;
     // Hack fix for animation shaking when we don't use backface of elements while transformations
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 
     &--main {
       display: block;
-      font-size: 60px;
+      font-size: 6rem;
       font-weight: 400;
-      letter-spacing: 35px;
+      letter-spacing: 3.5rem;
       animation: moveInLeft 1s ease-out;
     }
     &--sub {
       display: block;
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: 700;
-      letter-spacing: 17.4px;
+      letter-spacing: 1.75rem;
       animation: moveInRight 1s ease-out;
     }
   } // ! title

@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+/* Fonts */
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  font-family: "Lato", "Open Sans";
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
+  color: var(--gray);
+}

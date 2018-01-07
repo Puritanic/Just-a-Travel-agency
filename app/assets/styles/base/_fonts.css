@@ -1,9 +1,0 @@
-/* Fonts */
-
-body {
-  font-family: "Lato", "Open Sans";
-  font-weight: var(--font-weight-normal);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-  color: var(--gray);
-}

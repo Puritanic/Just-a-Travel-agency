@@ -5,9 +5,9 @@
   --black: #000;
   --gray: #777;
 
-  --light-green: #7ed56f;
-  --medium-green: #55c57a;
-  --dark-green: #28b485;
+  --primary-light-green: #7ed56f;
+  --primary-green: #55c57a;
+  --primary-dark-green: #28b485;
 
   --eggshell: #eee8d6;
   --darkblue: #022933;
@@ -25,7 +25,11 @@
   --color-links: var(--gray);
   --color-navigation-links: var(--blue);
 
-  --font-size-base: 16px;
+  /* Using percentages for the font size is the best practices, beacuse with overwritting  browsers
+    fz with pixels we are not allowing end users to use their chooses fz 
+    62.5% is 10px of browser default 16px if users haven't changed their fz
+    */
+  --font-size-base: 62.5%;
   --line-height-base: 1.7;
   --font-primary: "Work Sans", -apple-system, system-ui, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -111,12 +115,3 @@
   @media all and (min-width: 1601px) and (max-width: 1920px) {
   }
 } /* root */
-
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
