@@ -7,7 +7,7 @@
  */
 .clearfix::after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
@@ -24,7 +24,7 @@
   padding-left: 20px; /* 3 */
   padding-right: 20px; /* 3 */
   width: 100%; /* 1 */
- }
+}
 
 /**
  * Hide text while making it readable for screen readers
@@ -52,4 +52,22 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+// Helper classses
+.h {
+  &__center-text {
+    text-align: center;
+  }
+
+  &__mb--big {
+    margin-bottom: 8rem;
+  }
+
+  &__mb--medium {
+    margin-bottom: 4rem;
+  }
+
+  &__mb--small {
+    margin-bottom: 1.5rem;
+  }
 }

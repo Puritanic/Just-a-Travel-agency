@@ -50,3 +50,9 @@ $breakpoints: ("small": 320px, "medium": 768px, "large": 1024px) !default;
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: "/assets/" !default;
+
+// Grid
+
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;

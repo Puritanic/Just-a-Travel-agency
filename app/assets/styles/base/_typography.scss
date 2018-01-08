@@ -1,7 +1,60 @@
 /**
  * Basic typography style for copy text
  */
-body {
-  color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+.heading {
+  color: var(--white);
+  text-transform: uppercase;
+  // Hack fix for animation shaking when we don't use backface of elements while transformations
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  &__primary__title {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 1s ease-out;
+  }
+  &__primary__subtitle {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out;
+  } // ! Heading Primary
+
+  &__secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      $primary-light-green,
+      $primary-dark-green
+    );
+    -webkit-background-clip: text;
+    letter-spacing: 0.2rem;
+    color: transparent;
+    transition: transform 0.2s ease-in;
+
+    &:hover {
+      transform: skewY(2deg) skewX(15deg);
+      text-shadow: 0.5rem 1rem 2rem rgba($text-color, 0.2);
+    }
+  } // ! secondary
+
+  &__tertiary {
+    font-size: var(--default-font-size);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+} // ! heading
+
+.paragraph {
+  font-size: var(--default-font-size);
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }

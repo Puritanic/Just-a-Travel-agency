@@ -1,20 +1,24 @@
 @charset 'UTF-8';
 
 // 1. Configuration and helpers
-@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
-@import "abstracts/css-variables";
+@import "abstracts/sass-variables",
+  "abstracts/functions",
+  "abstracts/mixins",
+  "abstracts/css-variables";
 
 // 2. Vendors
 @import "vendor/normalize";
 
 // 3. Base stuff
-@import "base/base", "base/fonts", "base/typography", "base/helpers";
-@import "base/basetop";
-@import "./base/animations";
+@import "base/base",
+  "base/fonts",
+  "base/typography",
+  "base/helpers",
+  "base/basetop",
+  "base/animations";
 
 // 4. Layout-related sections
-@import "layout/header", "layout/footer";
-@import "layout/grids";
+@import "layout/header", "layout/footer", "layout/grids";
 
 // 5. Components
 @import "components/button";

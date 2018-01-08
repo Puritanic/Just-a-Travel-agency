@@ -31,6 +31,7 @@
     */
   --font-size-base: 62.5%;
   --line-height-base: 1.7;
+  --default-font-size: 1.6rem;
   --font-primary: "Work Sans", -apple-system, system-ui, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 

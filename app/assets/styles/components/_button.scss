@@ -58,4 +58,10 @@
     // Good for elements we want to be hidden before animation
     animation-fill-mode: backwards;
   }
+
+  &--text {
+    &:hover {
+      background: lighten($color: $primary-light-green, $amount: 25%);
+    }
+  }
 }
