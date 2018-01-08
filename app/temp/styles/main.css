@@ -853,6 +853,44 @@ body {
           animation-fill-mode: backwards; }
 .button--text:hover {
   background: #d6f2d2; }
+.composition {
+  position: relative; }
+.composition__photo {
+    width: 55%;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(34, 34, 34, .6);
+            box-shadow: 0 1.5rem 4rem rgba(34, 34, 34, .6);
+    border-radius: 0.2rem;
+    position: absolute;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    z-index: 9;
+    outline-offset: 10px;
+    outline-offset: 1rem; }
+.composition__photo--p1 {
+      left: 0;
+      top: -20px;
+      top: -2rem; }
+.composition__photo--p2 {
+      right: 0;
+      top: 20px;
+      top: 2rem; }
+.composition__photo--p3 {
+      left: 20%;
+      top: 100px;
+      top: 10rem; }
+.composition__photo:hover {
+      -webkit-transform: scale(1.1) translateY(-0.5rem);
+              transform: scale(1.1) translateY(-0.5rem);
+      -webkit-box-shadow: 0 2.5rem 4rem rgba(34, 34, 34, .7);
+              box-shadow: 0 2.5rem 4rem rgba(34, 34, 34, .7);
+      z-index: 10;
+      outline: 10px #28b485 solid;
+      outline: 1rem #28b485 solid; }
+.composition:hover .composition__photo:not(:hover) {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
 .about {
   background-color: #ededed;
   padding: 250px 0;
