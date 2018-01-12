@@ -35,6 +35,7 @@
 }
 
 .stories {
-  background-color: $light-grey;
+  position: relative;
+  transform: translateY(-5rem);
   padding: 15rem 0;
 }

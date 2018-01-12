@@ -1,8 +1,63 @@
 .story {
   width: 75%;
   margin: 0 auto;
+  font-size: var(--default-font-size);
   box-shadow: 0 3rem 6rem rgba($text-color, 0.1);
-  background-color: color(var(--color-light) a(50%));
+  background-color: color(var(--color-light) a(60%));
   border-radius: 0.3rem;
-  padding: 6rem;
+  padding: 4.5rem;
+  text-align: left;
+  transform: skewX(-12deg);
+
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    // shape-outside defines how the content flows around the element
+    // In order to shape outside to work element must be floated and have defined dimensions
+    // shape-outside: circle(radius of the circle, center horizontaly and verticaly)
+    shape-outside: circle(50% at 50% 50%);
+    // And we can use clip path to make it look like a circle
+    // or: clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at center);
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__image {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    // Cant transition :| Weird bug happens
+    transition: all 0.5s;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: var(--color-light);
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    // Set this to remove shaking of element near the end of the animation
+    backface-visibility: hidden;
+    transition: all 0.3s;
+  }
+  // When we hover story element, we want to change caption's state
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__image {
+    transform: translateX(-4rem);
+    filter: blur(3px) brightness(80%);
+  }
 }
