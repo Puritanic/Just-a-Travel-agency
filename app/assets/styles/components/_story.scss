@@ -32,7 +32,6 @@
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
     backface-visibility: hidden;
-    // Cant transition :| Weird bug happens
     transition: all 0.5s;
   }
 
@@ -57,7 +56,7 @@
   }
 
   &:hover &__image {
-    transform: translateX(-4rem);
+    transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(80%);
   }
 }
