@@ -52,6 +52,21 @@
     color: var(--color-links);
   }
 
+  &--green {
+    background: var(--primary-green);
+    color: var(--eggshell);
+
+    &:hover,
+    &:visited {
+      color: var(--color-light);
+    }
+  }
+
+  &--green::after {
+    background: var(--primary-green);
+    color: var(--eggshell);
+  }
+
   &--animated {
     animation: moveFromBottom 0.5s 0.75s ease-out;
     // This will use animations 0% before animations start

@@ -2,14 +2,14 @@
   perspective: 150rem;
   position: relative;
   color: violet;
-  height: 50rem;
+  height: 52rem;
   &__side {
     box-shadow: 0 1.5rem 4rem rgba($text-color, 0.15);
     backface-visibility: hidden; // hide background of the element while rotating
     transition: all 1s ease;
     border-radius: 0.3rem;
     position: absolute;
-    height: 50rem;
+    height: 52rem;
     width: 100%;
     left: 0;
     top: 0;
@@ -44,12 +44,15 @@
         );
       }
     }
-  }
+  } // side
+
   &__picture {
     background-size: cover;
     background-blend-mode: screen;
     height: 23rem;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     &--1 {
       background-image: linear-gradient(
           to bottom right,
@@ -74,7 +77,8 @@
         ),
         resolve("nat-5.jpg");
     }
-  }
+  } // Picture
+
   &__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -85,7 +89,7 @@
     top: 12rem;
     right: 2rem;
     width: 75%;
-  }
+  } // Heading
 
   &__heading-span {
     padding: 1rem 1.5rem;
@@ -111,28 +115,57 @@
         rgba($color: $tertiary-dark, $alpha: 0.85)
       );
     }
-  }
+  } // Heading-span
+
   &__details {
     padding: 3rem;
     ul {
       list-style: none;
       width: 80%;
-      text-align: center;
-      font-size: 1.5rem;
-      padding: 1rem;
       margin: 0 auto;
 
       li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
         &:not(:last-child) {
           border-bottom: 1px solid $light-grey;
         }
       }
     }
-  }
+  } // Details
+
   &:hover &__side--front {
     transform: rotateY(-180deg);
   }
   &:hover &__side--back {
     transform: rotateY(0);
+  }
+
+  &__cta {
+    position: absolute;
+    // CEntering element here VVV
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__price-box {
+    text-align: center;
+    color: var(--color-light);
+    margin-bottom: 4rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+    margin-bottom: 4rem;
   }
 }
