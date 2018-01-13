@@ -22,11 +22,12 @@
 
 // 5. Components
 @import "components/button",
+  "components/bg-video",
   "components/card",
   "components/composition",
   "components/feature-box",
-  "components/story",
-  "components/bg-video";
+  "components/form",
+  "components/story";
 
 // 6. Page-specific styles
 @import "pages/home";
