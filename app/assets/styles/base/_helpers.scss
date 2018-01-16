@@ -61,10 +61,18 @@
 
   &__mb--big {
     margin-bottom: 8rem !important;
+
+    @include respond(tab-port) {
+      margin-bottom: 5rem !important;
+    }
   }
 
   &__mb--medium {
     margin-bottom: 4rem !important;
+
+    @include respond(tab-port) {
+      margin-bottom: 3rem !important;
+    }
   }
 
   &__mb--small {

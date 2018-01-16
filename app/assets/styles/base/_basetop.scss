@@ -101,6 +101,10 @@ textarea {
 }
 body {
   padding: 3rem;
-  background: color(var(--eggshell) tint(80%));
   box-sizing: border-box;
+  background-color: $light-grey;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
