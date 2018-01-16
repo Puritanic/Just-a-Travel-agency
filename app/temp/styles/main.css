@@ -48,6 +48,17 @@
   font-style: normal;
   font-weight: 900;
   src: local("Lato Black"),local(Lato-Black),url(//fonts.gstatic.com/s/lato/v13/BjDVcwQGWPX2RAidnkd0Bw.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v13/tI4j516nok_GrVf4dhunkg.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v13/BVtM30trf7q_jfqYeHfjtA.woff) format("woff"); }
+/*
+Media query manager mixin
+
+0-600px:    Phone
+600-900px:  Tablet-portrait mode
+900-1200px:  Tablet-landscape mode
+1200-1800px:  Desktop - this is where all current styles apply
+1800px:  xlDesktop
+
+1em === 16px
+*/
 /*Variables*/
 :root {
   /* Using percentages for the font size is the best practices, beacuse with overwritting  browsers
@@ -1600,6 +1611,15 @@ body {
 @media screen and (min-width: 1280px) {
   .responsive {
     font-size: 30px; } }
+@media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+@media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+@media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 @media screen and (max-width: 420px) {
   .responsive {
     font-size: 16px; } }
