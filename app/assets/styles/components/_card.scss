@@ -1,13 +1,13 @@
 .card {
   perspective: 150rem;
   position: relative;
-  color: violet;
+  // color: violet;
   height: 52rem;
   &__side {
     box-shadow: 0 1.5rem 4rem rgba($text-color, 0.15);
     backface-visibility: hidden; // hide background of the element while rotating
     transition: all 1s ease;
-    border-radius: 0.3rem;
+    border-radius: 3px;
     position: absolute;
     height: 52rem;
     width: 100%;
@@ -167,5 +167,54 @@
     font-size: 6rem;
     font-weight: 100;
     margin-bottom: 4rem;
+  }
+
+  @include respond(tab-port) {
+    height: auto;
+    border-radius: 3px;
+    background: var(--color-light);
+    box-shadow: 0 1.5rem 4rem rgba($text-color, 0.15);
+
+    &__side {
+      position: relative;
+      height: auto;
+      box-shadow: none;
+
+      & > * {
+        overflow: hidden; // so that images dont overflow border radius
+      }
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    } // side
+
+    &__details {
+      padding: 3rem;
+    } // Details
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &__cta {
+      position: relative;
+      // CEntering element here VVV
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: translate(0);
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-value {
+      font-size: 6rem;
+      margin-bottom: 4rem;
+    }
   }
 }
