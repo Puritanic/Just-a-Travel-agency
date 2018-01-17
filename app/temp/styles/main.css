@@ -1536,9 +1536,7 @@ body {
   background-size: cover;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(34, 34, 34, .2);
           box-shadow: 0 1.5rem 4rem rgba(34, 34, 34, .2);
-  border-radius: 0.3rem;
-  height: 500px;
-  height: 50rem; }
+  border-radius: 0.3rem; }
 .book__form {
     width: 50%;
     padding: 60px;
@@ -1616,7 +1614,11 @@ body {
       font-size: 75%; } }
 @media (max-width: 75em) {
     html {
-      font-size: 56.25%; } }
+      font-size: 56.25%; }
+      .book__form {
+        width: 65%; }
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, .8) 0%, rgba(255, 255, 255, .8) 65%, transparent 65%), url('../images/nat-10.jpg'); } }
 @media (max-width: 56.25em) {
     html {
       font-size: 50%; }
@@ -1673,7 +1675,7 @@ body {
           -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
                   clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
       .card__details {
-        padding: 3rem; }
+        padding: 1rem 3rem; }
       .card:hover .card__side--front {
         -webkit-transform: rotateY(0);
                 transform: rotateY(0); }
@@ -1712,6 +1714,12 @@ body {
                   transform: scale(1.1); }
     .feature-box {
       min-height: 32rem; }
+    .form__input {
+      width: 100%; }
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; }
     .about {
       padding: 21rem 0; }
     .features {
@@ -1721,7 +1729,12 @@ body {
     .stories {
       padding: 6rem 0 10rem 0; }
     .booking {
-      padding: 10rem 0; } }
+      padding: 10rem 0; }
+      .book__form {
+        width: 100%; }
+    .book {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, .8)), to(rgba(255, 255, 255, .8))), url('../images/nat-10.jpg');
+      background-image: linear-gradient(to right, rgba(255, 255, 255, .8) 0%, rgba(255, 255, 255, .8) 100%), url('../images/nat-10.jpg'); } }
 @media (max-width: 37.5em) {
       .heading__primary__title {
         letter-spacing: 1rem;
@@ -1732,7 +1745,17 @@ body {
         font-size: 2.5rem; }
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-              clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+              clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
+    .form__radio-group {
+      display: block; }
+      .form__radio-group:nth-child(1) {
+        margin-bottom: 1rem; }
+    .story {
+      -webkit-transform: skewX(0);
+              transform: skewX(0); }
+      .story > * {
+        -webkit-transform: skewX(0);
+                transform: skewX(0); } }
 @media screen and (max-width: 420px) {
   .responsive {
     font-size: 16px; } }
