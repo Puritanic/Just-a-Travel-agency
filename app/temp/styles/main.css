@@ -770,14 +770,17 @@ body {
             transform: translate(0);
     opacity: 1; } }
 .header {
-  height: 96.85vh;
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, .7)), to(rgba(40, 180, 133, .7))), url('../images/hero.jpg') no-repeat;
-  background: linear-gradient(to right bottom, rgba(126, 213, 111, .7), rgba(40, 180, 133, .7)), url('../images/hero.jpg') no-repeat;
+  height: 85vh;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, .7)), to(rgba(40, 180, 133, .7))), url('../images/hero-small.jpg') no-repeat;
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, .7), rgba(40, 180, 133, .7)), url('../images/hero-small.jpg') no-repeat;
   background-size: cover;
   background-position: top;
-  position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  position: relative; }
+@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      height: 96.85vh; } }
 .header__logobox {
     position: absolute;
     top: 40px;
@@ -1362,6 +1365,11 @@ body {
   transition: all 0.3s;
   opacity: 0;
   visibility: hidden; }
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) or (webkit-backdrop-filter: blur(10px)) {
+    .popup {
+      -webkit-backdrop-filter: blur(10px);
+              backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, .3); } }
 .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -1383,10 +1391,12 @@ body {
     width: 75%;
     display: table;
     opacity: 0;
-    -webkit-transform: translate(-50%, -50%) scale(0.25);
-            transform: translate(-50%, -50%) scale(0.25);
-    -webkit-transition: all 0.4s 0.2s;
-    transition: all 0.4s 0.2s; }
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s; }
 .popup__img {
     display: block;
     width: 100%; }
@@ -1447,17 +1457,20 @@ body {
     -webkit-transform: skewX(12deg);
             transform: skewX(12deg); }
 .story__shape {
-    width: 150px;
-    width: 15rem;
-    height: 150px;
-    height: 15rem;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-            shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at center);
-            clip-path: circle(50% at center);
+    overflow: hidden;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    border-radius: 50%; }
+@supports ((-webkit-clip-path: circle(50% at center)) or (clip-path: circle(50% at center))) {
+      .story__shape {
+        -webkit-shape-outside: circle(50% at 50% 50%);
+                shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at center);
+                clip-path: circle(50% at center);
+        width: 15rem;
+        height: 15rem;
+        border-radius: none; } }
 .story__image {
     height: 100%;
     -webkit-transform: translateX(-4rem) scale(1.4);
@@ -1606,6 +1619,10 @@ body {
    ========================================================================== */
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */ }
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .header {
+      background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, .7)), to(rgba(40, 180, 133, .7))), url('../images/hero.jpg') no-repeat;
+      background: linear-gradient(to right bottom, rgba(126, 213, 111, .7), rgba(40, 180, 133, .7)), url('../images/hero.jpg') no-repeat; } }
 @media screen and (min-width: 1280px) {
   .responsive {
     font-size: 30px; } }

@@ -7,9 +7,13 @@
   background-color: rgba($color: #000000, $alpha: 0.7);
   z-index: 2500;
   transition: all 0.3s;
-
   opacity: 0;
   visibility: hidden;
+
+  @supports (backdrop-filter: blur(10px)) or (webkit-backdrop-filter: blur(10px)) {
+    backdrop-filter: blur(10px);
+    background-color: rgba($color: #000000, $alpha: 0.3);
+  }
 
   &:target {
     opacity: 1;
@@ -30,8 +34,8 @@
     width: 75%;
     display: table;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.25);
-    transition: all 0.4s 0.2s;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s;
   }
 
   &__img {

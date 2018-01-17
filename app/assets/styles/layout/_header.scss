@@ -2,32 +2,44 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 .header {
-  height: 96.85vh;
+  height: 85vh;
   background: linear-gradient(
       to right bottom,
       rgba($primary-light-green, 0.7),
       rgba($primary-dark-green, 0.7)
     ),
-    resolve("hero.jpg") no-repeat;
+    resolve("hero-small.jpg") no-repeat;
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+  @supports (clip-path: polygon(0 0 )) {
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    height: 96.85vh;
+  }
+
+  // Fallback for Safari -webkit-min-device-pixel-ratio, as it doesn't support dpi
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (min-width: 125em) {
+    background: linear-gradient(
+        to right bottom,
+        rgba($primary-light-green, 0.7),
+        rgba($primary-dark-green, 0.7)
+      ),
+      resolve("hero.jpg") no-repeat;
+  }
   @include respond(phone) {
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   }
-
   &__logobox {
     position: absolute;
     top: 4rem;
     left: 4rem;
-
     &__logo {
       height: 3.5rem;
     }
   } // ! logobox
-
   &__container {
     position: absolute;
     top: 40%;

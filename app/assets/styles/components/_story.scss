@@ -28,18 +28,24 @@
   }
 
   &__shape {
-    width: 15rem;
-    height: 15rem;
     float: left;
-    // shape-outside defines how the content flows around the element
-    // In order to shape outside to work element must be floated and have defined dimensions
-    // shape-outside: circle(radius of the circle, center horizontaly and verticaly)
-    shape-outside: circle(50% at 50% 50%);
-    // And we can use clip path to make it look like a circle
-    // or: clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at center);
+    overflow: hidden;
     position: relative;
     overflow: hidden;
+    border-radius: 50%;
+
+    @supports (clip-path: circle(50% at center)) {
+      // shape-outside defines how the content flows around the element
+      // In order to shape outside to work element must be floated and have defined dimensions
+      // shape-outside: circle(radius of the circle, center horizontaly and verticaly)
+      shape-outside: circle(50% at 50% 50%);
+      // And we can use clip path to make it look like a circle
+      // or: clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at center);
+      width: 15rem;
+      height: 15rem;
+      border-radius: none;
+    }
   }
 
   &__image {
