@@ -1,5 +1,11 @@
 
-# Frontend Starter Kit
+# Natours
+
+> Demo page featuring some experimental CSS3 features, Postcss and cool design :sunglasses:
+
+
+
+## Bootstraped with Frontend Starter Kit
 
 A boilerplate for frontend projects powered by [Gulp](https://github.com/gulpjs/gulp), latest [HTML5 bolierplate](https://github.com/h5bp/html5-boilerplate), [PostCss](https://github.com/postcss/postcss) and  Webpack(for Babel transpiling).
 
